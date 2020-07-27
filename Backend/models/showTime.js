@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const showSchema = mongoose.Schema({
-    city:mongoose.Schema.Types.ObjectId,
+    cityId:mongoose.Schema.Types.ObjectId,
     theaterId:mongoose.Schema.Types.ObjectId,
     movieId:mongoose.Schema.Types.ObjectId,
     showTime:[{

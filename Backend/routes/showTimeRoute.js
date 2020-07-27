@@ -2,7 +2,7 @@ const showTimeController = require("../controller/showTimeController");
 
 module.exports = [
   {
-    path: "/api/showtime",
+    path: "/api/showtime/{cityId}/{theaterID}/{movieId}",
     method: "POST",
     config: {
       handler: showTimeController.addShowTime.handler,
@@ -10,7 +10,7 @@ module.exports = [
     }
   },
   {
-    path: "/api/showtime/{city}/{theater}/{movie}",
+    path: "/api/showtime/{cityId}/{theaterID}/{movieId}",
     method: "GET",
     config: {
       handler: showTimeController.getshowTime.handler,

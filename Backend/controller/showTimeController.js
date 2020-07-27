@@ -2,9 +2,9 @@ const showTime=require('../models/showTime');
 addShowTime={
     handler: async (request, h) => {
       const showTimeDetail = new showTime({
-          city:request.payload.city,
-          theaterName:request.payload.theaterName,
-          movieName:request.payload.movieName,
+          cityId:request.params.cityId,
+          theaterId:request.params.theaterId,
+          movieId:request.params.movieId,
           showTime:request.payload.showTime,
           availability:request.payload.availability,
           price:request.payload.price   
@@ -23,7 +23,7 @@ addShowTime={
     handler: async(request,h)=>{
         console.log(request.params);
       try{
-        const showTimeDetails=await showTime.find({theaterName:request.params.theater,city:request.params.city,movieName:request.params.movie});
+        const showTimeDetails=await showTime.find({theaterId:request.params.theaterId,cityId:request.params.cityId,movieId:request.params.movieId});
         return h.response({showTimeDetails}).code(201);
       }
       catch(error){
