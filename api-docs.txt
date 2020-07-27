@@ -1,0 +1,32 @@
+City:
+
+GET: 	/api/city
+POST:	/api/city
+	{
+	"city":"Dindigul"
+	}
+DELETE:	/api/city/{id}
+	
+
+Theater:
+
+GET: 	/api/theater
+GET:	/api/theater/{cityId}
+POST: 	/api/theater/{cityId}
+	{
+	"theaterName":"INOX"
+	"location":"Marina Mall"
+	}
+DELETE:	/api/theater/{id}
+
+Movie:
+
+GET:	api/movie
+POST:	api/movie/{cityId}/{theaterId}
+	{
+	"movieName":"KKK",
+	"director":"Desinga Periyasamy",
+	"certificate":"U/A",
+	"language":"Tamil"
+	}
+Delete:	api/movie/{id}
